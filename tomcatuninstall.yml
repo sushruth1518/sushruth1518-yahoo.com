@@ -7,13 +7,13 @@
     - name: Stop Tomcat
       shell: ./shutdown.sh
       args:
-       chdir: /opt/apache-tomcat-8.5.49/bin/
+       chdir: /opt/apache-tomcat-8.5.54/bin/
       become: true
       become_user: tomcat
 
     - name: Remove Tomcat
       file:
-        path: /opt/apache-tomcat-8.5.49
+        path: /opt/apache-tomcat-8.5.54
         state: absent
 
     - name: remove user "tomcat"
